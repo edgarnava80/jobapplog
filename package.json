@@ -1,0 +1,21 @@
+{
+  "name": "jobapplog-fontend",
+  "version": "1.0.0",
+  "description": "Front-end of the Job Application Tracking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "edgarnava80@github.com"
+  },
+  "keywords": [
+    "Job",
+    "Search",
+    "Track",
+    "Applications"
+  ],
+  "author": "Edgar Nava",
+  "license": "ISC"
+}
