@@ -1,7 +1,7 @@
 {
     "name": "jobapplog-backend",
     "version": "1.0.0",
-    "description": "Front-end of the Job Application Tracking app",
+    "description": "Back-end of the Job Application Tracking app",
     "main": "app.js",
     "scripts": {
         "start": "nodemon server.js",
