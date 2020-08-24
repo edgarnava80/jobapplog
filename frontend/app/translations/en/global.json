@@ -1,0 +1,8 @@
+{
+    "header": {
+        "title": "JobApplicationTracker",
+        "home": "Home",
+        "view": "View Applications",
+        "create": "Create Application"
+    }
+}
