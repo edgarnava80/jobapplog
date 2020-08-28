@@ -4,5 +4,34 @@
         "home": "Inicio",
         "view": "Ver Aplicaciones",
         "create": "Crear nueva"
+    },
+    "homePage": {
+        "page": "Inicio",
+        "title": "Bienvenido al sistema de seguimiento de aplicaciones laborales!",
+        "date": "es"
+    },
+    "viewAllPage": {
+        "page": "Aplicaciones",
+        "title": "Aplicaciones",
+        "button": "Ver Aplicación",
+        "date": "es"
+    },
+    "viewOnePage": {
+        "page": "Aplicación",
+        "title": "Aplicación",
+        "buttonEdit": "Editar aplicación",
+        "buttonDelete": "Borrar aplicación",
+        "date": "en-US"
+    },
+    "createPage": {
+        "page": "Crear nueva",
+        "title": "Crear Nueva Aplicación",
+        "button": "Crear"
+    },
+    "editPage": {
+        "page": "Editar",
+        "title": "Editar Aplicación",
+        "button": "Guardar",
+        "date": "es"
     }
 }
