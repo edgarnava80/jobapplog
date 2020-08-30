@@ -33,5 +33,16 @@
         "title": "Editar Aplicación",
         "button": "Guardar",
         "date": "es"
+    },
+    "fields": {
+        "company": "Empresa",
+        "position": "Puesto",
+        "date": "Fecha",
+        "source": "Fuente",
+        "contact": "Contacto",
+        "link": "Liga",
+        "description": "Descripción",
+        "notes": "Notas",
+        "note": "Nota"
     }
 }

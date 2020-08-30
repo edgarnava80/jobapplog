@@ -33,5 +33,16 @@
         "title": "Edit Application",
         "button": "Save",
         "date": "en-US"
+    },
+    "fields": {
+        "company": "Company",
+        "position": "Position",
+        "date": "Date",
+        "source": "Source",
+        "contact": "Contact",
+        "link": "Link",
+        "description": "Description",
+        "notes": "Notes",
+        "note": "Note"
     }
 }

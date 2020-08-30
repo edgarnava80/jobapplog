@@ -16,6 +16,7 @@ const applicationSchema = new mongoose.Schema({
   },
   contact: String,
   link: String,
+  description: String,
   //  Learn how to add new notes for the same application
   notes: [
     {
