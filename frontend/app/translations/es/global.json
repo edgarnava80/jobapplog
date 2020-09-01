@@ -16,13 +16,6 @@
         "button": "Ver Aplicación",
         "date": "es"
     },
-    "viewOnePage": {
-        "page": "Aplicación",
-        "title": "Aplicación",
-        "buttonEdit": "Editar aplicación",
-        "buttonDelete": "Borrar aplicación",
-        "date": "en-US"
-    },
     "createPage": {
         "page": "Crear nueva",
         "title": "Crear Nueva Aplicación",
@@ -31,7 +24,8 @@
     "editPage": {
         "page": "Editar",
         "title": "Editar Aplicación",
-        "button": "Guardar",
+        "buttonEdit": "Guardar cambios",
+        "buttonDelete": "Borrar aplicación",
         "date": "es"
     },
     "fields": {

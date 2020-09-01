@@ -32,8 +32,8 @@ const ViewPage = () => {
       <h2>{t("viewAllPage.title")}</h2>
       <div className="row g-2 mt-4">
         {applications.map(app => (
-          <div className="col-md-6">
-            <AppCard key={app._id} app={app} />
+          <div key={app._id} className="col-md-6">
+            <AppCard app={app} />
           </div>
         ))}
       </div>

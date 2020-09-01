@@ -16,22 +16,16 @@
         "button": "View application",
         "date": "en-US"
     },
-    "viewOnePage": {
-        "page": "Application",
-        "title": "Job Application",
-        "buttonEdit": "Edit application",
-        "buttonDelete": "Delete application",
-        "date": "en-US"
-    },
     "createPage": {
         "page": "Create new",
         "title": "Create New Application",
         "button": "Create"
     },
     "editPage": {
-        "page": "Edit",
-        "title": "Edit Application",
-        "button": "Save",
+        "page": "Application",
+        "title": "Application",
+        "buttonEdit": "Save changes",
+        "buttonDelete": "Delete application",
         "date": "en-US"
     },
     "fields": {

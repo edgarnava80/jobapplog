@@ -34,7 +34,7 @@ const CreatePage = () => {
   return (
     <Page page="createPage">
       <h2>{t("createPage.title")}</h2>
-      <div className="container-fluid mt-3">
+      <div className="container mt-3">
         <form onSubmit={handleSubmit} classame="needs-validation" noValidate>
           <div className="row form-group">
             <div className="col-md-6">
