@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useContext } from "react"
+import { withRouter } from "react-router-dom"
 import Axios from "axios"
 import { useTranslation } from "react-i18next"
 
 import Page from "../components/Page.component"
+import GeneralContext from "../GeneralContext"
 
-const CreatePage = () => {
+const CreatePage = props => {
   const [company, setCompany] = useState()
   const [position, setPosition] = useState()
   //const [date, setDate] = useState()
@@ -12,12 +14,15 @@ const CreatePage = () => {
   const [contact, setContact] = useState()
   const [link, setLink] = useState()
   const [description, setDescription] = useState()
+  const addFlashMessage = useContext(GeneralContext)
 
   const [t, i18n] = useTranslation("global")
   const createApplication = async () => {
     try {
       const response = await Axios.post("/api/v1/applications", { company, position, source, contact, link, description })
       console.log("Application succesfully created!" + response)
+      props.history.push("/view")
+      addFlashMessage(company + t("createPage.message"))
     } catch (err) {
       console.log("There was an error in the API call: " + err)
     }
@@ -83,4 +88,4 @@ const CreatePage = () => {
   )
 }
 
-export default CreatePage
+export default withRouter(CreatePage)

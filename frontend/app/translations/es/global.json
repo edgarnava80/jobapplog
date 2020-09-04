@@ -19,13 +19,16 @@
     "createPage": {
         "page": "Crear nueva",
         "title": "Crear Nueva Aplicación",
-        "button": "Crear"
+        "button": "Crear",
+        "message": " : Aplicación creada!"
     },
     "editPage": {
         "page": "Editar",
         "title": "Editar Aplicación",
         "buttonEdit": "Guardar cambios",
+        "messageEdit": " : Cambios guardados. ",
         "buttonDelete": "Borrar aplicación",
+        "messageDelete": " : Aplicación eliminada!",
         "date": "es"
     },
     "fields": {

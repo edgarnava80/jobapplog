@@ -1,43 +1,59 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useContext } from "react"
+import { withRouter } from "react-router-dom"
 import { useLocation } from "react-router"
 import { useTranslation } from "react-i18next"
+import Axios from "axios"
 
 import Page from "../components/Page.component"
+import GeneralContext from "../GeneralContext"
 
-const EditPage = () => {
+const EditPage = props => {
   const location = useLocation()
+  const addFlashMessage = useContext(GeneralContext)
   const [application, setApplication] = useState(location.state.app)
   const [t, i18n] = useTranslation("global")
 
-  // const getApplication = async () => {
-  //   try {
-  //     const response = await Axios.post("/api/v1/applications")
-  //     if (response.data) {
-  //       //setApplication(response.data.data.applications)
-  //       console.log("API call successfull!"+response.data)
-  //     } else {
-  //       console.log("Empty response.")
-  //     }
-  //   } catch (err) {
-  //     console.log("There was an error in the API call: " + err)
-  //   }
-  // }
+  const updateApplication = async () => {
+    const url = "/api/v1/applications/" + application._id
+    try {
+      const response = await Axios.patch(url, { company: application.company, position: application.position })
+      if (response.data) {
+        props.history.push("/view")
+        console.log("Update successfull!" + response.data)
+        addFlashMessage(application.company + t("editPage.messageEdit"))
+      } else {
+        console.log("Empty response from update application.")
+      }
+    } catch (err) {
+      console.log("There was an error in update application: " + err)
+    }
+  }
+  const deleteApplication = async () => {
+    const url = "/api/v1/applications/" + application._id
+    try {
+      const response = await Axios.delete(url)
+      props.history.push("/view")
+      console.log("Delete successfull!")
+      addFlashMessage(application.company + t("editPage.messageDelete"))
+    } catch (err) {
+      console.log("There was an error in delete application: " + err)
+    }
+  }
 
-  const handleSubmit = e => {
+  const handleDelete = e => {
     e.preventDefault()
-    console.log("From handle submit")
+    deleteApplication()
   }
   const handleEdit = e => {
     e.preventDefault()
-    console.log("From handle edit" + application)
+    updateApplication()
   }
 
   return (
     <Page page="editPage">
       <h2>{t("editPage.title")}</h2>
-      {console.log(application.company)}
       <div className="container mt-3">
-        <form onSubmit={handleSubmit} classame="needs-validation" noValidate>
+        <form classame="needs-validation" noValidate>
           <div className="row form-group">
             <div className="col-md-6">
               <label htmlFor="company" className="text-muted mb-2">
@@ -81,11 +97,13 @@ const EditPage = () => {
           <button onClick={handleEdit} className="btn btn-primary mr-3">
             {t("editPage.buttonEdit")}
           </button>
-          <button className="btn btn-danger">{t("editPage.buttonDelete")}</button>
+          <button onClick={handleDelete} className="btn btn-danger">
+            {t("editPage.buttonDelete")}
+          </button>
         </form>
       </div>
     </Page>
   )
 }
 
-export default EditPage
+export default withRouter(EditPage)

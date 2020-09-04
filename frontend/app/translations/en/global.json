@@ -19,13 +19,16 @@
     "createPage": {
         "page": "Create new",
         "title": "Create New Application",
-        "button": "Create"
+        "button": "Create",
+        "message": " : Application created!"
     },
     "editPage": {
         "page": "Application",
         "title": "Application",
         "buttonEdit": "Save changes",
+        "messageEdit": " application was edited.",
         "buttonDelete": "Delete application",
+        "messageDelete": " application was deleted!",
         "date": "en-US"
     },
     "fields": {
