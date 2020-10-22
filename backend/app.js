@@ -1,7 +1,12 @@
+//  MAIN APPLICATION FILE
+//  IMPORT EXTERNAL MODULES
 const express = require('express');
 const morgan = require('morgan');
-//const cors = require('cors');
+//const cors = require('cors');   //  Temporaly omited as it wasn't working on production server
+
+//  IMPORT INTERNAL MODULES
 const applicationRouter = require('./routes/applicationRoutes');
+const userRouter = require('./routes/userRoutes');
 
 const app = express();
 
@@ -27,5 +32,6 @@ app.use((req, res, next) => {
 //  3) ROUTES
 
 app.use('/api/v1/applications', applicationRouter);
+app.use('/api/v1/users', userRouter);
 
 module.exports = app;
