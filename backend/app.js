@@ -1,4 +1,3 @@
-//  MAIN APPLICATION FILE
 //  IMPORT EXTERNAL MODULES
 const express = require('express');
 const morgan = require('morgan');

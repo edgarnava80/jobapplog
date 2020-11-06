@@ -1,6 +1,6 @@
 const User = require('../models/userModel');
 
-exports.getUser = async (req, res) => {
+exports.getUserById = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
 
@@ -13,7 +13,34 @@ exports.getUser = async (req, res) => {
   } catch (err) {
     res.status(404).json({
       status: 'fail',
-      message: 'There was a problem!',
+      message: 'There was a problem getting the user by id!',
+    });
+  }
+};
+
+exports.getUser = async (req, res) => {
+  try {
+    console.log('Body: ', req.body);
+    // const user = await User.find({
+    //   username: req.params.username,
+    //   password: req.params.password,
+    // });
+    const user = await User.find({
+      username: req.body.username,
+      password: req.body.password,
+    });
+
+    res.status(200).json({
+      status: 'exito',
+      data: {
+        user,
+      },
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(404).json({
+      status: 'fail',
+      message: `There was an error! ${err.message}`,
     });
   }
 };
