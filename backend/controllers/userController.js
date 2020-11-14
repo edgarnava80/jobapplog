@@ -18,31 +18,32 @@ exports.getUserById = async (req, res) => {
   }
 };
 
-exports.getUser = async (req, res) => {
-  try {
-    console.log('Body: ', req.body);
-    // const user = await User.find({
-    //   username: req.params.username,
-    //   password: req.params.password,
-    // });
-    const user = await User.find({
-      username: req.body.username,
-      password: req.body.password,
-    });
+exports.getUser = (req, res) => {
+  console.log(req.body);
+  // try {
+  //   console.log('Body: ', req.body);
+  //   // const user = await User.find({
+  //   //   username: req.params.username,
+  //   //   password: req.params.password,
+  //   // });
+  //   const user = await User.find({
+  //     username: req.body.username,
+  //     password: req.body.password,
+  //   });
 
-    res.status(200).json({
-      status: 'exito',
-      data: {
-        user,
-      },
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(404).json({
-      status: 'fail',
-      message: `There was an error! ${err.message}`,
-    });
-  }
+  //   res.status(200).json({
+  //     status: 'exito',
+  //     data: {
+  //       user,
+  //     },
+  //   });
+  // } catch (err) {
+  //   console.log(err);
+  //   res.status(404).json({
+  //     status: 'fail',
+  //     message: `There was an error! ${err.message}`,
+  //   });
+  // }
 };
 
 exports.createUser = async (req, res) => {
