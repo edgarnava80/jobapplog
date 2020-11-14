@@ -9,6 +9,6 @@ const router = express.Router();
 
 //router.route('/:username&:password').get(userController.getUser);
 
-router.route('/').post(userController.getUser);
+router.route('/user').get(userController.getAllUsers).post(userController.validateUser);
 
 module.exports = router;
