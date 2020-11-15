@@ -31,4 +31,9 @@ exports.signup = async (req, res) => {
 
 exports.login = (req, res, next) => {
   const { email, password } = req.body;
+  // 1) Check if email and password exist
+
+  // 2) Check if email and password are correct
+
+  // 3) Send token to the user
 };
